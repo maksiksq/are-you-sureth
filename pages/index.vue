@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const welcome = ref<string>("i wish i knew a person existing near who i'd find enjoyable")
+const welcome = ref<string>("また一人なの？")
 const time = ref<Date>(new Date())
 
-const isLightbox = ref<boolean>(false);
+const showLightbox = ref<boolean>(false);
 
 </script>
 
 <template>
-  <Lightbox :is-lightbox=isLightbox />
+  <Lightbox :is-lightbox=showLightbox />
   <Settings/>
   <main class="main-wrapper">
     <div>
@@ -43,9 +43,8 @@ body, html {
 }
 
 ::selection {
-  background: #2e2e2e;
+  background: #8a02b5;
 }
-
 </style>
 <style scoped>
 .main-wrapper {
